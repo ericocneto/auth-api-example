@@ -9,6 +9,6 @@ export abstract class Entity<Props> {
         this._id = id ?? new UniqueEntityID()
     }
     get id():any {
-        return this.id
+        return this._id
     }
 }

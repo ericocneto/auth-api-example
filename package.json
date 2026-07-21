@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch src/infra/http/server.ts",
+    "lint": "biome lint ./src",
+    "lint:fix": "biome lint --write ./src",
     "test:watch": "vitest",
-    "test": "vitest run"
+    "test": "vitest run",
+    "build": "tsup src/infra/http/server.ts"
   },
   "keywords": [],
   "author": "",
