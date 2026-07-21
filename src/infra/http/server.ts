@@ -1,4 +1,4 @@
-import {app} from './app'
+import {app} from '@/main/http'
 import { env } from '@/main/env'
 
 app.listen({
