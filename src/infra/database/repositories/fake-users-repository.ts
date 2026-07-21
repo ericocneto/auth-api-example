@@ -7,4 +7,7 @@ export class FakeUsersRepository implements UsersRepository {
   async create(user: User): Promise<void> {
     this.users.push(user)
   }
+  async findMany(): Promise<User[]> {
+    return [...this.users]
+  }
 }
