@@ -8,4 +8,8 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
+  test: {
+    include: ['src/**/*.spec.ts'],
+    exclude: ['dist/**', 'node_modules/**'],
+  },
 })

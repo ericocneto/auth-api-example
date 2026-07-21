@@ -9,7 +9,7 @@ const createUserBodySchema = z.object({
 })
 
 export function createUserController(createNewUser:CreateNewUserUseCase) {
-    return async function(request:FastifyRequest, reply:FastifyReply){
+    return async (request:FastifyRequest, reply:FastifyReply)=> {
         const {username, email, password} = createUserBodySchema.parse(request.body)
         const {user} = await createNewUser.execute({
             username, email, password

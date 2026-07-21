@@ -3,7 +3,7 @@ import type { FastifyInstance } from "fastify";
 import { createUserController } from "../controllers/create-user-controller";
 
 export function usersRoutes(createNewUser:CreateNewUserUseCase) {
-    return async function (app:FastifyInstance) {
+    return async (app:FastifyInstance) => {
         app.post("/users", createUserController(createNewUser))
     }
 }
